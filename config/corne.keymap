@@ -47,18 +47,18 @@
 // |  CAPS|  Q  |  W  |  F   |  P  |  B  |   |  J    |  L   |  U  |  Y  | - + |sqbrckt|
 // |  ALT |  A  |  R  |  S   |  T  |  G  |   |  M    |  N   |  E  |  I  |  O  |parenth|
 // | CTRL |  Z  |  X  |  C   |  D  |  V  |   |  K    |  H   | , ; | . : | ' " |  ? !  |
-//                    |E/SHFT| BSPC|T/NAV|   |SYMNUM | SPC  |E/SHFT|
+//                    |E SHFT| BSPC|T NAV|   |SYMNUM | SPC  |E SHFT|
                         bindings = <
    &mt ESC LG(D)    &kp Q    &kp W    &kp F          &kp P         &kp B            &kp J    &kp L      &kp U             &kp Y             &mt PLUS MINUS    &mt RBKT LBKT
    &mt LALT CAPS    &kp A    &kp R    &kp S          &kp T         &kp G            &kp M    &kp N      &kp E             &kp I             &kp O             &mt RPAR LPAR
-   &kp CTRL         &kp Z    &kp X    &kp C          &kp D         &kp V            &kp K    &kp H      &mt SEMI COMMA    &mt COLON DOT     &mt EN_DQT SQT    &mt EXCL QMARK
+   &kp CTRL         &kp Z    &kp X    &kp C          &kp D         &kp V            &kp K    &kp H      &mt SEMI COMMA    &mt COLON DOT     &mt DQT SQT       &mt EXCL QMARK
                                       &mt LSHFT RET  &kp BSPC      &lt NAV TAB      &td0     &kp SPC    &mt RSHFT RET
                         >;
                 };
                 SYMNUM_layer {
 // -----------------------------------------------------------------------------------------
-// |     |  `  |  £  |  ^  |  @  |wavybkt|   | /   | 7   | 8   | 9   | -/+ |       |
-// |     |  ~  |  $  |  %  |  &  |  <    |   | *   | 4   | 5   | 6   |  =  |       |
+// |     |  `  |  £  |  ^  |  @  |wavybkt|   | /   | 7   | 8   | 9   | - + |       |
+// |     |  ~  |  $  |  %  |  &  | LT    |   | *   | 4   | 5   | 6   |  =  |       |
 // |     |  ¬  |  €  |  #  |  _  |PIPE   |   | 0   | 1   | 2   | 3   |  .  |       |
 //                   |     |     |       |   |     |     |     |
                         bindings = <
