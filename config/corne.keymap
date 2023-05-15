@@ -7,7 +7,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include "keys_en_gb_extended.h" 
+#include "keys_en_gb_extended.h"
+#include "keys_uk_enhanced (2).h"
 #define DEFAULT 0
 #define SYMNUM  1
 #define NAV     2
@@ -51,7 +52,7 @@
                         bindings = <
    &mt ESC LG(D)    &kp Q    &kp W    &kp F          &kp P         &kp B            &kp J    &kp L      &kp U             &kp Y             &mt PLUS MINUS    &mt RBKT LBKT
    &mt LALT CAPS    &kp A    &kp R    &kp S          &kp T         &kp G            &kp M    &kp N      &kp E             &kp I             &kp O             &mt RPAR LPAR
-   &kp CTRL         &kp Z    &kp X    &kp C          &kp D         &kp V            &kp K    &kp H      &mt SEMI COMMA    &mt COLON DOT     &mt DQT SQT       &mt EXCL QMARK
+   &kp CTRL         &kp Z    &kp X    &kp C          &kp D         &kp V            &kp K    &kp H      &mt SEMI COMMA    &mt COLON DOT     &mt DQT SQT    &mt EXCL QMARK
                                       &mt LSHFT RET  &kp BSPC      &lt NAV TAB      &td0     &kp SPC    &mt RSHFT RET
                         >;
                 };
