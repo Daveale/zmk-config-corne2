@@ -9,13 +9,14 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "keys_en_gb_extended.h"
 #include "keys_uk_enhanced (2).h"
+#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 #define DEFAULT 0
 #define SYMNUM  1
 #define NAV     2
 #define BT      3
 &mt {
     flavor = "tap-preferred";
-    tapping_term_ms = <300>;
+    tapping_term_ms = <200>;
 };
 / {
         behaviours {
@@ -32,6 +33,15 @@
                     #binding-cells = <0>;
                     tapping-term-ms = <200>;
                     bindings = <&mo SYMNUM>, <&tog SYMNUM>;
+                };
+                as: auto_shift {
+                    compatible = "zmk,behavior-hold-tap";
+                    label = "AUTO_SHIFT";
+                    #binding-cells = <2>;
+                    tapping_term_ms = <150>;
+                    quick_tap_ms = <0>;
+                    flavor = "tap-preferred";
+                    bindings = <&kp>, <&kp>;
                 };
             };
         conditional_layers {
@@ -50,10 +60,10 @@
 // | CTRL |  Z  |  X  |  C   |  D  |  V  |   |  K    |  H   | , ; | . : | ' " |  ? !  |
 //                    |E SHFT| BSPC|T NAV|   |SYMNUM | SPC  |E SHFT|
                         bindings = <
-   &mt ESC LG(D)    &kp Q    &kp W    &kp F          &kp P         &kp B            &kp J    &kp L      &kp U             &kp Y             &mt PLUS MINUS    &mt RBKT LBKT
-   &mt LALT CAPS    &kp A    &kp R    &kp S          &kp T         &kp G            &kp M    &kp N      &kp E             &kp I             &kp O             &mt RPAR LPAR
-   &kp LCTRL        &kp Z    &kp X    &kp C          &kp D         &kp V            &kp K    &kp H      &mt SEMI COMMA    &mt COLON DOT     &mt DQT SQT    &mt EXCL QMARK
-                                      &mt LSHFT RET  &kp BSPC      &lt NAV TAB      &td0     &kp SPC    &mt RSHFT RET
+   &mt ESC LG(D)    &AS(Q)    &AS(W)    &AS(F)          &AS(P)         &AS(B)            &AS(J)    &AS(L)      &AS(U)             &AS(Y)             &mt PLUS MINUS    &mt RBKT LBKT
+   &mt LALT         &AS(A)    &AS(R)    &AS(S)          &AS(T)         &AS(G)            &AS(M)    &AS(N)      &AS(E)             &AS(I)             &AS(O)            &mt RPAR LPAR
+   &kp LCTRL        &AS(Z)    &AS(X)    &AS(C)          &AS(D)         &AS(V)            &AS(K)    &AS(H)      &mt SEMI COMMA     &mt COLON DOT      &mt EN_DQT SQT    &mt EXCL QMARK
+                                        &mt LSHFT RET   &kp BSPC       &mo NAV           &td0      &kp SPC     &mt CAPS TAB
                         >;
                 };
                 SYMNUM_layer {
@@ -63,9 +73,9 @@
 // |     |  ¬  |  €  |  #  |  _  |PIPE   |   | 0   | 1   | 2   | 3   |  .  |       |
 //                   |     |     |       |   |     |     |     |
                         bindings = <
-   &trans    &kp EN_GRAVE  &kp EN_POUND_SIGN   &kp CARET     &kp EN_AT   &mt RBRC LBRC                       &mt EN_BSLH SLASH     &kp N7   &kp N8   &kp N9    &mt PLUS MINUS   &trans
-   &trans    &kp EN_TILDE  &kp EN_DOLLAR       &kp PRCNT     &kp AMPS    &mt GT LT                           &kp STAR              &kp N4   &kp N5   &kp N6    &kp EQUAL        &trans
-   &trans    &kp EN_NOT    &kp EN_EURO         &kp BSLH      &kp UNDER   &mt EN_BROKEN_BAR EN_PIPE           &kp N0                &kp N1   &kp N2   &kp N3    &kp DOT          &trans
+   &trans    &kp EN_GRAVE  &kp EN_POUND_SIGN   &kp CARET     &kp EN_AT   &mt RBRC LBRC                       &mt EN_TILDE SLASH    &kp N7   &kp N8   &kp N9    &mt PLUS MINUS   &trans
+   &trans    &kp EN_PIPE   &kp EN_DOLLAR       &kp PRCNT     &kp AMPS    &mt GT LT                           &kp STAR              &kp N4   &kp N5   &kp N6    &kp EQUAL        &trans
+   &trans    &kp EN_NOT    &kp EN_EURO         &kp BSLH      &kp UNDER   &mt EN_BROKEN_BAR LS(EN_TILDE)      &kp N0                &kp N1   &kp N2   &kp N3    &kp DOT          &trans
                                                &trans        &trans      &trans                              &trans                &trans   &trans
                         >;
                 };
