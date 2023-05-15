@@ -52,7 +52,7 @@
                         bindings = <
    &mt ESC LG(D)    &kp Q    &kp W    &kp F          &kp P         &kp B            &kp J    &kp L      &kp U             &kp Y             &mt PLUS MINUS    &mt RBKT LBKT
    &mt LALT CAPS    &kp A    &kp R    &kp S          &kp T         &kp G            &kp M    &kp N      &kp E             &kp I             &kp O             &mt RPAR LPAR
-   &kp CTRL         &kp Z    &kp X    &kp C          &kp D         &kp V            &kp K    &kp H      &mt SEMI COMMA    &mt COLON DOT     &mt DQT SQT    &mt EXCL QMARK
+   &kp LCTRL        &kp Z    &kp X    &kp C          &kp D         &kp V            &kp K    &kp H      &mt SEMI COMMA    &mt COLON DOT     &mt DQT SQT    &mt EXCL QMARK
                                       &mt LSHFT RET  &kp BSPC      &lt NAV TAB      &td0     &kp SPC    &mt RSHFT RET
                         >;
                 };
