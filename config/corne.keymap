@@ -15,30 +15,41 @@
 #define BT      3
 &mt {
     flavor = "tap-preferred";
-    tapping_term_ms = <200>;
+    tapping_term_ms = <250>;
 };
 / {
         behaviours {
-                lsdot: leftshift_dot {
-                    compatible = "zmk,behavior-mod-morph";
-                    label = "LS_DOT";
-                    #binding-cells = <0>;
-                    bindings = <&kp DOT>, <&kp DOT>;
-                    mods = <(MOD_LSFT)>;
-                };
+//                lsdot: leftshift_dot {
+//                    compatible = "zmk,behavior-mod-morph";
+//                    label = "LS_DOT";
+//                    #binding-cells = <0>;
+//                    bindings = <&kp DOT>, <&kp DOT>;
+//                    mods = <(MOD_LSFT)>;
+//                };
+//                gqt: global-quick-tap {
+//                    compatible = "zmk,behavior-hold-tap";
+//                    label = "GLOBAL_QUICK_TAP";
+//                    #binding-cells = <2>;
+//                    flavor = "tap-preferred";
+//                    tapping-term-ms = <200>;
+//                    quick-tap-ms = <125>;
+//                    global-quick-tap;
+//                    bindings = <&kp>, <&kp>;
+//                };
                 td0: tap_dance_0 {
                     compatible = "zmk,behavior-tap-dance";
                     label = "TAP_DANCE_0";
                     #binding-cells = <0>;
-                    tapping-term-ms = <200>;
+                    tapping-term-ms = <250>;
                     bindings = <&mo SYMNUM>, <&tog SYMNUM>;
                 };
                 as: auto_shift {
                     compatible = "zmk,behavior-hold-tap";
                     label = "AUTO_SHIFT";
                     #binding-cells = <2>;
-                    tapping_term_ms = <150>;
-                    quick_tap_ms = <0>;
+                    tapping_term_ms = <250>;
+                    quick_tap_ms = <125>;       //added line
+                    global-quick-tap;           //added line
                     flavor = "tap-preferred";
                     bindings = <&kp>, <&kp>;
                 };
