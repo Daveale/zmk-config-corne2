@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "keys_en_gb_extended.h"
 #include "keys_uk_enhanced (2).h"
-#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
+#define AS(keycode) &as LS(keycode) keycode
 #define DEFAULT 0
 #define SYMNUM  1
 #define NAV     2
@@ -60,10 +60,10 @@
 // | CTRL |  Z  |  X  |  C   |  D  |  V  |   |  K    |  H   | , ; | . : | ' " |  ? !  |
 //                    |E SHFT| BSPC|T NAV|   |SYMNUM | SPC  |E SHFT|
                         bindings = <
-   &mt ESC LG(D)    &AS(Q)    &AS(W)    &AS(F)          &AS(P)         &AS(B)            &AS(J)    &AS(L)      &AS(U)             &AS(Y)             &mt PLUS MINUS    &mt RBKT LBKT
-   &mt LALT         &AS(A)    &AS(R)    &AS(S)          &AS(T)         &AS(G)            &AS(M)    &AS(N)      &AS(E)             &AS(I)             &AS(O)            &mt RPAR LPAR
-   &kp LCTRL        &AS(Z)    &AS(X)    &AS(C)          &AS(D)         &AS(V)            &AS(K)    &AS(H)      &mt SEMI COMMA     &mt COLON DOT      &mt EN_DQT SQT    &mt EXCL QMARK
-                                        &mt LSHFT RET   &kp BSPC       &mo NAV           &td0      &kp SPC     &mt CAPS TAB
+   &mt ESC LG(D)    AS(Q)    AS(W)    AS(F)           AS(P)          AS(B)             AS(J)     AS(L)       AS(U)              AS(Y)              &mt PLUS MINUS    &mt RBKT LBKT
+   &mt LALT         AS(A)    AS(R)    AS(S)           AS(T)          AS(G)             AS(M)     AS(N)       AS(E)              AS(I)              AS(O)             &mt RPAR LPAR
+   &kp LCTRL        AS(Z)    AS(X)    AS(C)           AS(D)          AS(V)             AS(K)     AS(H)       &mt SEMI COMMA     &mt COLON DOT      &mt EN_DQT SQT    &mt EXCL QMARK
+                                      &mt LSHFT RET   &kp BSPC       &mo NAV           &td0      &kp SPC     &mt CAPS TAB
                         >;
                 };
                 SYMNUM_layer {
