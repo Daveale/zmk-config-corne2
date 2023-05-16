@@ -47,8 +47,8 @@
                     compatible = "zmk,behavior-hold-tap";
                     label = "AUTO_SHIFT";
                     #binding-cells = <2>;
-                    tapping_term_ms = <250>;
-                    quick_tap_ms = <150>;       //added line
+                    tapping_term_ms = <300>;
+                    quick_tap_ms = <200>;       //added line
                     global-quick-tap;           //added line
                     flavor = "tap-preferred";
                     bindings = <&kp>, <&kp>;
