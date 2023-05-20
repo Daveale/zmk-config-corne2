@@ -15,7 +15,7 @@
 #define BT      3
 &mt {
     flavor = "tap-preferred";
-    tapping_term_ms = <250>;
+    tapping_term_ms = <300>;
 };
 / {
         behaviours {
@@ -48,7 +48,7 @@
                     label = "AUTO_SHIFT";
                     #binding-cells = <2>;
                     tapping_term_ms = <300>;
-                    quick_tap_ms = <200>;       //added line
+                    quick_tap_ms = <-1>;       //added line
                     global-quick-tap;           //added line
                     flavor = "tap-preferred";
                     bindings = <&kp>, <&kp>;
@@ -96,10 +96,10 @@
 // |     |UNDO |WIN+1|WIN  |WIN+E|PASTE|   |MUTE |MIC- |LSHFT|     |     |LOCK |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans    &kp LC(F)        &mt HOME PG_UP    &kp UP     &mt END PG_DN  &kp DEL                     &kp C_VOL_UP    &kp LC(U)        &kp LC(B)  &kp LC(I)        &none     &kp C_BRI_UP
-   &trans    &kp LC(A)        &kp LEFT          &kp DOWN   &kp RIGHT      &mt LC(X) LC(C)             &kp C_VOL_DN    &mt C_RW C_PREV  &kp C_PP   &mt C_FF C_NEXT  &none     &kp C_BRI_DN 
-   &trans    &mt LC(Y) LC(Z)  &kp LG(N1)        &kp LGUI   &kp LG(E)      &mt LC(LA(V)) LC(V)         &kp C_MUTE      &kp LG(LA(K))    &kp LSHFT  &none            &none     &kp LG(L) 
-                    	                        &trans     &trans         &trans                      &trans          &trans           &trans
+   &trans    &kp LC(F)        &mt HOME PG_UP        &kp UP     &mt END PG_DN  &kp DEL                     &kp C_VOL_UP    &kp LC(U)        &kp LC(B)  &kp LC(I)        &none     &kp C_BRI_UP
+   &trans    &kp LC(A)        &kp LEFT              &kp DOWN   &kp RIGHT      &mt LC(X) LC(C)             &kp C_VOL_DN    &mt C_RW C_PREV  &kp C_PP   &mt C_FF C_NEXT  &none     &kp C_BRI_DN 
+   &trans    &mt LC(Y) LC(Z)  &mt LC(T) LA(LEFT)    &kp LGUI   &kp LG(E)      &mt LC(LA(V)) LC(V)         &kp C_MUTE      &kp LG(LA(K))    &kp LSHFT  &none            &none     &kp LG(L) 
+                    	                            &trans     &trans         &trans                      &trans          &trans           &trans
                         >;
                 };
                 BT_layer {
