@@ -72,7 +72,7 @@
                         bindings = <
    &mt LALT ESC     &as LS(Q) Q    &as LS(W) W   &as LS(F) F          &as LS(P) P         &as LS(B) B            &as LS(J) J    &as LS(L) L      &as LS(U) U        &as LS(Y) Y        &mt PLUS MINUS    &mt RBKT LBKT
    &mt LSHFT CAPS   &as LS(A) A    &as LS(R) R   &as LS(S) S          &as LS(T) T         &as LS(G) G            &as LS(M) M    &as LS(N) N      &as LS(E) E        &as LS(I) I        &as LS(O) O       &mt RPAR LPAR
-   &mt LCTRL LG(D)  &as LS(Z) Z    &as LS(X) X   &as LS(C) C          &as LS(D) D         &as LS(V) V            &as LS(K) K    &as LS(H) H      &mt SEMI COMMA     &mt COLON DOT      &mt EN_DQT SQT    &mt EXCL QMARK
+   &mt LCTRL LG(M)  &as LS(Z) Z    &as LS(X) X   &as LS(C) C          &as LS(D) D         &as LS(V) V            &as LS(K) K    &as LS(H) H      &mt SEMI COMMA     &mt COLON DOT      &mt EN_DQT SQT    &mt EXCL QMARK
                                                  &mt LS(RET) RET      &kp BSPC            &mo NAV                &td0           &kp SPC          &mt LS(TAB) TAB
                         >;
                 };
@@ -93,26 +93,26 @@
 // -----------------------------------------------------------------------------------------
 // |     |FIND |HOME |UP   |END  |DEL  |   |VOL+ |LC+U |LC+B |LC+I |     | BR+ |
 // |     |ALL  |LEFT |DOWN |RIGHT|COPY |   |VOL- |RWND |PLAY |FFWD |     | BR- |
-// |     |UNDO |WIN+1|WIN  |WIN+E|PASTE|   |MUTE |MIC- |LSHFT|     |     |LOCK |
+// |     |UNDO |     |WIN  |     |PASTE|   |MUTE |MIC- |LSHFT|LCTRL|     |     |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans    &kp LC(F)        &mt HOME PG_UP        &kp UP           &mt END PG_DN  &kp DEL                     &kp C_VOL_UP    &kp LC(U)        &kp LC(B)  &kp LC(I)        &none     &kp C_BRI_UP
-   &trans    &kp LC(A)        &kp LEFT              &kp DOWN         &kp RIGHT      &mt LC(X) LC(C)             &kp C_VOL_DN    &mt C_RW C_PREV  &kp C_PP   &mt C_FF C_NEXT  &none     &kp C_BRI_DN 
-   &trans    &mt LC(Y) LC(Z)  &kp LA(LEFT)          &mt LG(E) LGUI   &kp LC(T)      &mt LC(LA(V)) LC(V)         &kp C_MUTE      &kp LG(LA(K))    &kp LSHFT  &none            &none     &kp LG(L) 
-                    	                            &trans           &trans         &trans                      &trans          &trans           &trans
+   &trans    &kp LC(F)        &mt PG_UP HOME     &kp UP           &mt PG_DN END  &kp DEL                     &kp C_VOL_UP    &kp LC(U)        &kp LC(B)  &kp LC(I)        &none     &kp C_BRI_UP
+   &trans    &kp LC(A)        &kp LEFT           &kp DOWN         &kp RIGHT      &mt LC(X) LC(C)             &kp C_VOL_DN    &mt C_RW C_PREV  &kp C_PP   &mt C_FF C_NEXT  &none     &kp C_BRI_DN 
+   &trans    &mt LC(Y) LC(Z)  &kp LA(LEFT)       &mt LG(E) LGUI   &kp LC(T)      &mt LC(LA(V)) LC(V)         &kp C_MUTE      &kp LG(LA(K))    &kp LSHFT  &kp LCTRL        &none     &none 
+                    	                         &trans           &trans         &trans                      &trans          &trans           &trans
                         >;
                 };
                 BT_layer {
 // -----------------------------------------------------------------------------------------
-// |BTCLR|     |     |     |     | BT1 |   |     |     |     |     |     |     |
-// |BTTOG|     |     |     |     | BT2 |   |     |     |     |     |     |     |
-// |BOOTL|RESET|     |     |     | BT3 |   |     |     |     |     |RESET|BOOTL|
-//                   |     |     |     |   |     |     |     |
+// |BTCLR|     |     |     |     |C+A+Del|   | BT1 | BT2 | BT3 | BT4 | BT5 |     |
+// |     |     |     |     |     | LOCK  |   |     |     |     |     |     |     |
+// |BOOTL|RESET|     |     |     |       |   |     |     |     |     |RESET|BOOTL|
+//                   |     |     |       |   |     |     |     |
                         bindings = <
-   &bt BT_CLR    &none        &none    &none    &none    &bt BT_SEL 1        &none  &none  &none  &none  &none       &none 
-   &out OUT_TOG  &none        &none    &none    &none    &bt BT_SEL 2        &none  &none  &none  &none  &none       &none
-   &bootloader   &sys_reset   &none    &none    &none    &bt BT_SEL 3        &none  &none  &none  &none  &sys_reset  &bootloader
-                                       &trans   &trans   &trans              &trans &trans &trans
+   &bt BT_CLR    &none        &none    &none    &none    &kp LC(LA(DEL))        &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5      &none 
+   &none         &none        &none    &none    &none    &kp LG(L)              &none         &none         &none         &none         &none             &none
+   &bootloader   &sys_reset   &none    &none    &none    &none                  &none         &none         &none         &none         &sys_reset        &bootloader
+                                       &trans   &trans   &trans                 &trans        &trans        &trans
                          >;
                 };
         };
