@@ -91,12 +91,12 @@
                 };
                 NAV_layer {
 // -----------------------------------------------------------------------------------------
-// |CLOSE|PRINT|HOME |UP   |END   |DEL  |   |Kmenu|LC+U |LC+B |LC+I | BR+  | VOL+ |
+// |CLOSE|PRINT|HOME |UP   |END   |DEL  |   |K_APP|LC+U |LC+B |LC+I | BR+  | VOL+ |
 // | F6  |ALL  |LEFT |DOWN |RIGHT |COPY |   |Find |RWND |PLAY |FFWD | BR-  | VOL- |
 // | F11 |UNDO |<BACK|WIN  |NEWTAB|PASTE|   |Save |WIN  |LSHFT|LCTRL|MICmut|VOLmut|
 //                   |     |      |     |   |     |     |     |
                         bindings = <
-   &mt LA(F4) ESC   &mt LC(P) LG(LS(S))   &mt PG_UP HOME     &kp UP           &mt PG_DN END          &kp DEL                     &mt F6 Kmenu          &kp LC(U)        &kp LC(B)  &kp LC(I)        &kp C_BRI_UP   &kp C_VOL_UP
+   &mt LA(F4) ESC   &mt LC(P) LG(LS(S))   &mt PG_UP HOME     &kp UP           &mt PG_DN END          &kp DEL                     &mt F6 K_APP          &kp LC(U)        &kp LC(B)  &kp LC(I)        &kp C_BRI_UP   &kp C_VOL_UP
    &trans           &kp LC(A)             &kp LEFT           &kp DOWN         &kp RIGHT              &mt LC(X) LC(C)             &mt LC(H) LC(F)       &mt C_RW C_PREV  &kp C_PP   &mt C_FF C_NEXT  &kp C_BRI_DN   &kp C_VOL_DN
    &trans           &mt LC(Y) LC(Z)       &mt LC(W) LA(LEFT) &mt F11 LC(E)    &mt LA(RIGHT) LC(T)    &mt LC(LS(V)) LC(V)         &mt LC(LS(S)) LC(S)   &mt LGUI LG(E)   &kp LSHFT  &kp LCTRL        &kp LG(LA(K))  &kp C_MUTE
                     	                                     &trans           &trans                 &trans                      &trans                &trans           &trans
