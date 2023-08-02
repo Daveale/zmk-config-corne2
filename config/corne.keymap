@@ -83,23 +83,23 @@
 // |     |  ¬  |  €  |  #  |  _  | | ¦ |   |  0  |  1  |  2  |  3  |  .  |     |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &trans    &kp EN_GRAVE  &kp EN_POUND_SIGN   &kp CARET     &kp EN_AT   &mt RBRC LBRC                       &mt EN_TILDE SLASH    &kp N7   &kp N8   &kp N9    &mt PLUS MINUS   &trans
-   &trans    &kp EN_PIPE   &kp EN_DOLLAR       &kp PRCNT     &kp AMPS    &mt GT LT                           &kp STAR              &kp N4   &kp N5   &kp N6    &kp EQUAL        &trans
-   &trans    &kp EN_NOT    &kp EN_EURO         &kp BSLH      &kp UNDER   &mt EN_BROKEN_BAR LS(EN_TILDE)      &kp N0                &kp N1   &kp N2   &kp N3    &kp DOT          &trans
-                                               &trans        &trans      &trans                              &trans                &trans   &trans
+   &trans    &kp EN_GRAVE  &kp EN_POUND_SIGN   &kp CARET     &kp EN_AT   &mt RBRC LBRC                       &mt EN_TILDE SLASH    &mt LC(N7) N7   &mt LC(N8) N8   &mt LC(N9) N9    &mt PLUS MINUS   &trans
+   &trans    &kp EN_PIPE   &kp EN_DOLLAR       &kp PRCNT     &kp AMPS    &mt GT LT                           &kp STAR              &mt LC(N4) N4   &mt LC(N5) N5   &mt LC(N6) N6    &kp EQUAL        &trans
+   &trans    &kp EN_NOT    &kp EN_EURO         &kp BSLH      &kp UNDER   &mt EN_BROKEN_BAR LS(EN_TILDE)      &mt LC(N0) N0         &mt LC(N1) N1   &mt LC(N2) N2   &mt LC(N3) N3    &kp DOT          &trans
+                                               &trans        &trans      &trans                              &trans                &trans          &trans
                         >;
                 };
                 NAV_layer {
 // -----------------------------------------------------------------------------------------
-// |     |FIND |HOME |UP   |END  |DEL  |   |VOL+ |LC+U |LC+B |LC+I |     | BR+ |
-// |     |ALL  |LEFT |DOWN |RIGHT|COPY |   |VOL- |RWND |PLAY |FFWD |     | BR- |
-// |     |UNDO |     |WIN  |     |PASTE|   |MUTE |MIC- |LSHFT|LCTRL|     |     |
-//                   |     |     |     |   |     |     |     |
+// |CLOSE|PRINT|HOME |UP   |END   |DEL  |   |Kmenu|LC+U |LC+B |LC+I | BR+  | VOL+ |
+// | F6  |ALL  |LEFT |DOWN |RIGHT |COPY |   |Find |RWND |PLAY |FFWD | BR-  | VOL- |
+// | F11 |UNDO |<BACK|WIN  |NEWTAB|PASTE|   |Save |WIN  |LSHFT|LCTRL|MICmut|VOLmut|
+//                   |     |      |     |   |     |     |     |
                         bindings = <
-   &trans    &kp LC(F)        &mt PG_UP HOME     &kp UP           &mt PG_DN END  &kp DEL                     &kp C_VOL_UP    &kp LC(U)        &kp LC(B)  &kp LC(I)        &none     &kp C_BRI_UP
-   &trans    &kp LC(A)        &kp LEFT           &kp DOWN         &kp RIGHT      &mt LC(X) LC(C)             &kp C_VOL_DN    &mt C_RW C_PREV  &kp C_PP   &mt C_FF C_NEXT  &none     &kp C_BRI_DN 
-   &trans    &mt LC(Y) LC(Z)  &kp LA(LEFT)       &mt LG(E) LGUI   &kp LC(T)      &mt LC(LA(V)) LC(V)         &kp C_MUTE      &kp LG(LA(K))    &kp LSHFT  &kp LCTRL        &none     &none 
-                    	                         &trans           &trans         &trans                      &trans          &trans           &trans
+   &mt LA(F4) ESC   &mt LC(P) LG(LS(S))   &mt PG_UP HOME     &kp UP           &mt PG_DN END          &kp DEL                     &mt F6 Kmenu          &kp LC(U)        &kp LC(B)  &kp LC(I)        &kp C_BRI_UP   &kp C_VOL_UP
+   &trans           &kp LC(A)             &kp LEFT           &kp DOWN         &kp RIGHT              &mt LC(X) LC(C)             &mt LC(H) LC(F)       &mt C_RW C_PREV  &kp C_PP   &mt C_FF C_NEXT  &kp C_BRI_DN   &kp C_VOL_DN
+   &trans           &mt LC(Y) LC(Z)       &mt LC(W) LA(LEFT) &mt F11 LC(E)    &mt LA(RIGHT) LC(T)    &mt LC(LS(V)) LC(V)         &mt LC(LS(S)) LC(S)   &mt LGUI LG(E)   &kp LSHFT  &kp LCTRL        &kp LG(LA(K))  &kp C_MUTE
+                    	                                     &trans           &trans                 &trans                      &trans                &trans           &trans
                         >;
                 };
                 BT_layer {
